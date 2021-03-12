@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
 
 This tutorial is split into steps.
-Each step has its own tag, except the step0 up to step3 that is grouped under step3 tag.
+Each step has its own tag, except the step1 up to step3 that is grouped under step3 tag.
 Requires Node.js.
 
 
