@@ -1,0 +1,13 @@
+<p>
+Hello!
+My name is "<i>{{myName}}</i>" and it was given by my parent.
+</p>
+<br /><br />
+
+<h4>Event Binding @Output - Child</h4>
+<label>Add an item: <input #newItem></label>&nbsp;&nbsp;
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+<br /><br />
+
+<label>Current sport code: {{sportCode}}</label><br />
+<button (click)="inc()" title="next">+</button><br />

@@ -1,0 +1,144 @@
+<h2>{{title}}</h2>
+<img [src]="siteBadge">
+
+<br />
+<br />
+<h4>span="{{1 + 1}}"</h4>
+<table>
+  <colgroup>
+    <col span="{{1 + 1}}" style="background-color:#D2D2D2">
+  </colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>Angular for Now</td>
+    <td>$53</td>
+  </tr>
+</table>
+
+<br />
+<br />
+<h4>[span]="1 + 1"</h4>
+<table>
+  <colgroup>
+    <col [span]="1 + 1" style="background-color:#D2D2D2">
+  </colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476900</td>
+    <td>Angular for Tomorrow</td>
+    <td>$106</td>
+  </tr>
+</table>
+
+<br />
+<br />
+<h4>[span]="span"</h4>
+<table>
+  <colgroup>
+    <col [span]="span" style="background-color:#D2D2D2">
+  </colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476999</td>
+    <td>Angular Forever</td>
+    <td>$10600</td>
+  </tr>
+</table>
+
+<br />
+<br />
+<h4>Property Binding Example Using a Button</h4>
+<button [disabled]="buttonDisabled">Button Enable/Disable property binding</button>
+<br />
+<br />
+
+<h4>Property Binding Example Using an Image </h4>
+<h5>
+  &lt;img [alt]=&quot;birds[0].name&quot; [src]=&quot;birds[0].image&quot; /&gt;
+</h5>
+<img [alt]="birds[0].name" [src]="birds[0].image" />
+<br /><br />
+
+<h5>
+  &lt;img bind-alt=&quot;birds[1].name&quot; bind-src=&quot;birds[1].image&quot;&gt;
+</h5>
+<img bind-alt="birds[1].name" bind-src="birds[1].image">
+<br /><br />
+
+<h4>DOM's element property interpolation without event treatment</h4>
+<p> {{carSelection.value}} </p>
+<select #carSelection>
+  <option value="Fiat">Fiat</option>
+  <option value="Hyundai">Hyundai</option>
+  <option value="Mercedes">Mercedes</option>
+</select>
+<br /><br />
+
+<h4>DOM's element property interpolation plus event</h4>
+<p> {{carSelection2.value}} </p>
+<select #carSelection2 (input)="0">
+  <option value="Fiat">Fiat</option>
+  <option value="Hyundai">Hyundai</option>
+  <option value="Mercedes">Mercedes</option>
+</select>
+<br /><br />
+
+<h4>&lt;p [innerHTML]=&quot;titleOfParagraph&quot;&gt;&lt;/p&gt;</h4>
+<p [innerHTML]="titleOfParagraph"></p>
+<br /><br />
+
+<h4>CSS style using [ngStyle]</h4>
+&lt;p [ngStyle]=&quot;pHighlight&quot;&gt;TITLE HIGHLIGHTED #1&lt;/p&gt;<br />
+<p [ngStyle]="pHighlight">TITLE HIGHLIGHTED #1</p>
+<br /><br />
+
+<h4>CSS style using not using [ngStyle]</h4>
+&lt;p [style.color]=&quot;thColor&quot; [style.font-size]=&quot;thFontSz&quot; [style.background]=&quot;thBackground&quot;&gt;TITLE HIGHLIGHTED #2&lt;/p&gt;<br />
+<p [style.color]="thColor" [style.font-size]="thFontSz" [style.background]="thBackground">TITLE HIGHLIGHTED #2</p>
+<br /><br />
+
+<h4>Event Binding</h4>
+<button (click)="hello()">Hello!</button>
+<br /><br />
+
+
+<h4>Event Binding - Child</h4>
+<app-app-child
+  [(sportItem)]="currentSportItem" (sportItemChange)="currentSportItem=$event"
+  [(sportCode)]="currentSportCode" (sportCodeChange)="currentSportCode=$event"
+  [myName]="childName" (newItemEvent)="addItem($event)">
+</app-app-child>
+<p>{{currentSportItem}}</p>
+
+<h4>Event Binding - Parent</h4>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<br /><br />
+<app-app-item [item]="currentItem" (deleteRequest)="crossOffItem($event)" >oba</app-app-item>
+<br /><br />
+
+<h4>Event Binding using ngModel</h4>
+<p>Current item name: {{currentItem}}</p>
+<p>
+  <label for="example-ngModel">[(ngModel)]:</label>
+  <input [ngModel]="person.name" (ngModelChange)="nameToUppercase($event)" id="example-ngModel">
+</p>
+
+
+<app-child-ng></app-child-ng>
+
+<router-outlet></router-outlet>
