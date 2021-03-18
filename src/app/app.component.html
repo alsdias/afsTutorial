@@ -10,207 +10,26 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4"><img [src]="siteBadge"></h1>
 </div>
-<div class="container">
+
+<div class="container" style="margin-top: 40px">
   <div class="card-deck mb-12 text-center">
       <div class="card mb-6 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-bold">{{1 + 1}}" style="background-color:#D2D2D2"</h4>
+            <h4 class="my-0 font-weight-bold"><a  href="/binding">Step 3 - Binding</a></h4>
           </div>
           <div class="card-body">
-            <table cellpadding="10px" cellspacing="10px">
-              <tr>
-                <th>ISBN</th>
-                <th>Title</th>
-                <th>Price</th>
-              </tr>
-              <tr>
-                <td>3476896</td>
-                <td>Angular for Now</td>
-                <td>$53</td>
-              </tr>
-            </table>
+            <h4>With NgModel examples from Angular Documentation</h4>
           </div>
       </div>
       <div class="card mb-6 box-shadow">
           <div class="card-header">
-              <h4 class="my-0 font-weight-bold">Property Binding Example Using a Button</h4>
+            <h4 class="my-0 font-weight-bold"><a  href="/fakedb">Step 6 - Dependency Injection and Service</a></h4>
           </div>
           <div class="card-body">
-            <p>The button is disabled because its value is bound to the property buttonDisabled=true.</p>
-            <button [disabled]="buttonDisabled">Button Enable/Disable property binding</button>
+            <h4>Constructing a fake in-memory database, implements a component where the database is injected</h4>>
           </div>
       </div>
   </div>
-
-    <div class="card mb-12 box-shadow spacer">
-      <div class="card-header">
-          <h4 class="my-0 font-weight-bold">Property Binding Example Using an Image</h4>
-      </div>
-      <div class="card-body">
-        <h5>
-          &lt;img [alt]=&quot;birds[0].name&quot; [src]=&quot;birds[0].image&quot; /&gt;
-        </h5>
-        <img [alt]="birds[0].name" [src]="birds[0].image" />
-      </div>
-    </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Property Binding Example Using Image</h4>
-    </div>
-    <div class="card-body">
-      <h5>
-        &lt;img bind-alt=&quot;birds[1].name&quot; bind-src=&quot;birds[1].image&quot;&gt;
-      </h5>
-      <img bind-alt="birds[1].name" bind-src="birds[1].image">
-
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">DOM's element property interpolation <font color="brown">without event treatment</font></h4>
-    </div>
-    <div class="card-body">
-      <p>The value keeps static, doesn't change.</p>
-      <p> {{carSelection.value}} </p>
-      <select #carSelection>
-          <option value="Fiat">Fiat</option>
-          <option value="Hyundai">Hyundai</option>
-          <option value="Mercedes">Mercedes</option>
-        </select>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">DOM's element property interpolation plus event</h4>
-    </div>
-    <div class="card-body">
-      <p> {{carSelection2.value}} </p>
-      <select #carSelection2 (input)="0">
-        <option value="Fiat">Fiat</option>
-        <option value="Hyundai">Hyundai</option>
-        <option value="Mercedes">Mercedes</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">DOM's element property interpolation plus event</h4>
-    </div>
-    <div class="card-body">
-      <p> {{carSelection2.value}} </p>
-      <select #carSelection2 (input)="0">
-        <option value="Fiat">Fiat</option>
-        <option value="Hyundai">Hyundai</option>
-        <option value="Mercedes">Mercedes</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">&lt;p [innerHTML]=&quot;titleOfParagraph&quot;&gt;&lt;/p&gt;</h4>
-    </div>
-    <div class="card-body">
-      <p [innerHTML]="titleOfParagraph"></p>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">CSS style using [ngStyle]</h4>
-    </div>
-    <div class="card-body">
-      &lt;p [ngStyle]=&quot;pHighlight&quot;&gt;TITLE HIGHLIGHTED #1&lt;/p&gt;<br />
-      <p [ngStyle]="pHighlight">TITLE HIGHLIGHTED #1</p>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">CSS style using not using [ngStyle]</h4>
-    </div>
-    <div class="card-body">
-      &lt;p [ngStyle]=&quot;pHighlight&quot;&gt;TITLE HIGHLIGHTED #1&lt;/p&gt;<br />
-      <p [ngStyle]="pHighlight">TITLE HIGHLIGHTED #1</p>
-    </div>
-  </div>
-
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">CSS style using [ngStyle]</h4>
-    </div>
-    <div class="card-body">
-      &lt;p [style.color]=&quot;thColor&quot; [style.font-size]=&quot;thFontSz&quot; [style.background]=&quot;thBackground&quot;&gt;TITLE HIGHLIGHTED #2&lt;/p&gt;<br />
-      <p [style.color]="thColor" [style.font-size]="thFontSz" [style.background]="thBackground">TITLE HIGHLIGHTED #2</p>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Event Binding</h4>
-    </div>
-    <div class="card-body">
-      <button (click)="hello()">Hello!</button>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">CSS style using [ngStyle]</h4>
-    </div>
-    <div class="card-body">
-      &lt;p [style.color]=&quot;thColor&quot; [style.font-size]=&quot;thFontSz&quot; [style.background]=&quot;thBackground&quot;&gt;TITLE HIGHLIGHTED #2&lt;/p&gt;<br />
-      <p [style.color]="thColor" [style.font-size]="thFontSz" [style.background]="thBackground">TITLE HIGHLIGHTED #2</p>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Event Binding - Child</h4>
-    </div>
-    <div class="card-body">
-      <app-app-child
-        [(sportItem)]="currentSportItem" (sportItemChange)="currentSportItem=$event"
-        [(sportCode)]="currentSportCode" (sportCodeChange)="currentSportCode=$event"
-        [myName]="childName" (newItemEvent)="addItem($event)">
-      </app-app-child>
-      <p>{{currentSportItem}}</p>
-        </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Event Binding - Parent</h4>
-    </div>
-    <div class="card-body">
-        <h6 *ngFor="let item of items">{{item}}</h6>
-      <br /><br />
-      <app-app-item [item]="currentItem" (deleteRequest)="crossOffItem($event)" >oba</app-app-item>
-    </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Event Binding using ngModel</h4>
-    </div>
-    <div class="card-body">
-      <p>Current item name: {{currentItem}}</p>
-      <p>
-        <label for="example-ngModel">[(ngModel)]:</label>
-        <input [ngModel]="person.name" (ngModelChange)="nameToUppercase($event)" id="example-ngModel">
-      </p>
-    </div>
-  </div>
-
-  <br /><br />
-  <app-child-ng></app-child-ng>
-
-  <br /><br /><br /><br />
-  <router-outlet></router-outlet>
-
 </div>
+
+<router-outlet></router-outlet>

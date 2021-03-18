@@ -1,0 +1,16 @@
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="margin-top: 90px;">
+  <h1 class="display-4"><img [src]="siteBadge"></h1>
+</div>
+
+<div class="card mb-12 box-shadow spacer" style="margin-top: 50px;">
+  <div class="card-header">
+      <h4 class="my-0 font-weight-bold">Example Using Fake In-memory Database</h4>
+  </div>
+  <div class="card-body" style="margin-top: 40px;">
+      <h5>ID, Name, Age, Logical deletion</h5>
+      <p>----------------------------------------------</p>
+      <h6 *ngFor="let person of persons">{{person}}</h6>
+    <br /><br />
+  </div>
+</div>
+

@@ -10,6 +10,11 @@ import { AppItemComponent } from './app-item/app-item.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ChildNgComponent } from './child-ng/child-ng.component';
 import { ItemSwitchComponents } from './item-switch.component';
+import { FakeDBComponent } from './model/fake-db/fake-db.component';
+import { BindingComponent } from './binding/binding.component';
+import { FakeDbComponent } from './fake-db/fake-db.component';
+import { ProvComponent } from './prov/prov.component';
+import { DbService } from './model/db.service';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,17 @@ import { ItemSwitchComponents } from './item-switch.component';
     ItemDetailComponent,
     ChildNgComponent,
     ItemSwitchComponents,
+    FakeDBComponent,
+    BindingComponent,
+    FakeDbComponent,
+    ProvComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
