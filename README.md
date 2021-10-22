@@ -28,6 +28,21 @@ ng serve
 Point to:
 localhost:4200
 
+## Getting the steps locally
+
+After cloning, do as follows:
+git fetch
+git checkout -b tags/step3
+git checkout main
+git checkout -b tags/step4
+git checkout main
+git checkout -b tags/step6
+git checkout main
+
+
+To check what you've gotten:
+git branch
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
