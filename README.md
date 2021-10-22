@@ -12,7 +12,21 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After cloning, do under project root:
+npm install
+
+Run `ng build` to build the project. 
+The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running
+
+npm start
+or
+
+ng serve
+
+Point to:
+localhost:4200
 
 ## Running unit tests
 
