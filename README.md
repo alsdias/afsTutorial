@@ -12,7 +12,36 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After cloning, do under project root:
+npm install
+
+Run `ng build` to build the project. 
+The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running
+
+npm start
+or
+
+ng serve
+
+Point to:
+localhost:4200
+
+## Getting the steps locally
+
+After cloning, do as follows:
+git fetch
+git checkout -b tags/step3
+git checkout main
+git checkout -b tags/step4
+git checkout main
+git checkout -b tags/step6
+git checkout main
+
+
+To check what you've gotten:
+git branch
 
 Alternatively, if windows, run "st.bat" and point to:
 http://localhost:4400/

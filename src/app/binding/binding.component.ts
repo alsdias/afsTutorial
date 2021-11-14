@@ -69,6 +69,7 @@ export class BindingComponent implements OnInit {
   }
 
   crossOffItem(event: EventEmitter<void>): void {
+      console.log('deleting item');
       this.items.shift();
   }
 
