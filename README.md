@@ -28,6 +28,14 @@ ng serve
 Point to:
 localhost:4200
 
+
+
+Alternatively, if windows, run "st.bat" to use a different port:
+http://localhost:4000/
+
+
+## 
+
 ## Getting the steps locally
 
 After cloning, do as follows:
@@ -39,12 +47,9 @@ git checkout main
 git checkout -b tags/step6
 git checkout main
 
-
 To check what you've gotten:
 git branch
 
-Alternatively, if windows, run "st.bat" and point to:
-http://localhost:4000/
 
 
 ## Running unit tests
