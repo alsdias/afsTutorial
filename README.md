@@ -44,7 +44,7 @@ To check what you've gotten:
 git branch
 
 Alternatively, if windows, run "st.bat" and point to:
-http://localhost:4400/
+http://localhost:4000/
 
 
 ## Running unit tests
