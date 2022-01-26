@@ -127,7 +127,20 @@
 
   <div class="card mb-12 box-shadow spacer">
     <div class="card-header">
+        <h4 class="my-0 font-weight-bold">Event Binding - Parent</h4>
+        <p><i>binding.component.html/.ts</i></p>
+    </div>
+    <div class="card-body">
+        <h6 *ngFor="let item of items">{{item}}</h6>
+      <br /><br />
+      <app-app-item [item]="currentItem" (deleteRequest)="crossOffItem($event)" ></app-app-item>
+    </div>
+  </div>
+
+  <div class="card mb-12 box-shadow spacer">
+    <div class="card-header">
         <h4 class="my-0 font-weight-bold">Event Binding - Child</h4>
+        <p><i>app-child.component.html/.ts</i></p>
     </div>
     <div class="card-body">
       <app-app-child
@@ -137,17 +150,6 @@
       </app-app-child>
       <p>{{currentSportItem}}</p>
         </div>
-  </div>
-
-  <div class="card mb-12 box-shadow spacer">
-    <div class="card-header">
-        <h4 class="my-0 font-weight-bold">Event Binding - Parent</h4>
-    </div>
-    <div class="card-body">
-        <h6 *ngFor="let item of items">{{item}}</h6>
-      <br /><br />
-      <app-app-item [item]="currentItem" (deleteRequest)="crossOffItem($event)" ></app-app-item>
-    </div>
   </div>
 
   <div class="card mb-12 box-shadow spacer">
